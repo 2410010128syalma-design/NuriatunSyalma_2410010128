@@ -1,34 +1,133 @@
-<HTML>
-    <HEAD>
-        <TITLE>Pemrograman Web</TITLE>
-    </HEAD>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Pribadi</title>
+    <link rel="stylesheet" href="syalma.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <BODY>
-        <P><B><H1><HR/><BR/>✧。✧。PENGENALAN HTML✧。✧。</H1></B></P>
-        <P><I><H2>✧。berupa kode tag yang menginstruksikan browser untuk menghasilkan tampilan sesuai dengan yang diinginkan✧。</H2></I></P>
-        <P><U><H3>✧。Terdiri atas tag - tag pembuka dan penutup✧。</H3></U></P>
-        <P><H4>✧。Metadata adalah data tentang dokumen html✧。</H4></P>
-        <P><H5>✧。Ekstensi file berupa .htm atau .html✧。</H5></P>
-    </BODY>
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
 
-    <hr/>
-        <P>
-            <span style="color:blueviolet; font-style: italic; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
-                <I>✧。Saya Syalma dari kelas 3C Reg BJM ✧。</I>
-            </span><br/>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border: 3px solid black;
+            padding: 0;
+        }
 
-            <span style="color: brown; font-style: oblique; font-family: 'Times New Roman', Times, serif; font-size:20px;">
-                <B>✧。Saya Syalma dari kelas 3C Reg BJM ✧。</B>
-            </span>
-        </P>
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 3px solid black;
+        }
 
-        <p>
-            Rumus Kimia:
-        <p>Air: H<sub>2</sub>O</p>
-        <p>Karbon dioksida: CO<sub>2</sub></p>
-        <p>Ammonium: NH<sub>4</sub><sup>+</sup></p>
-        <p>Besi (III): Fe<sup>3+</sup></p>
-        <p>Reaksi pembakaran: CH<sub>4</sub> + 2 O<sub>2</sub> &rarr; CO<sub>2</sub> + 2 H<sub>2</sub>O</p>
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
 
-        </p>
-</HTML>
+        .biodata {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px 15px;
+            border: 2px solid black;
+        }
+
+        .label {
+            font-weight: bold;
+            background-color: #f89ce9;
+            width: 150px;
+        }
+
+        .value {
+            background-color: #9ed2fd;
+        }
+
+        .highlight {
+            background-color: #9ed2fd; /* contoh warna oranye muda */
+        }
+        .sub-label {
+            font-weight: bold;
+            background-color: white;
+            padding-left: 30px;
+        }
+
+        .sub-value {
+            background-color: white;
+        }
+
+        tr:nth-child(even) .value {
+            background-color: #e8f2f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Biodata</h1>
+            <div class="Biodata" style="text-align: center;">
+                <img src="foto saya.jpg" alt="Foto Profil" style="width:150px; height:150px; border-radius:10px; border:2px solid #000;">
+            </div>
+            
+                
+        </div>
+
+        <table>
+            <tr>
+                <td class="label">Nama Depan</td>
+                <td class="value">Nuriatun</td>
+                <td class="label">Nama Belakang</td>
+                <td class="value">Syalma</td>
+            </tr>
+            <tr>
+                <td class="label">Tempat Lahir</td>
+                <td class="highlight">Rangga Ilung</td>
+                <td class="label">Tanggal Lahir</td>
+                <td class="highlight">02 November 2006</td>
+            </tr>
+            <tr>
+                <td class="label" rowspan="4">Alamat</td>
+                <td class="sub-label">Jalan</td>
+                <td class="sub-value" colspan="2">Jalan Amd XII</td>
+            </tr>
+            <tr>
+                <td class="sub-label">Kelurahan</td>
+                <td class="sub-value" colspan="2">Pemurus Dalam</td>
+            </tr>
+            <tr>
+                <td class="sub-label">Kecamatan</td>
+                <td class="sub-value" colspan="2">Banjarmasin Selatan</td>
+            </tr>
+            <tr>
+                <td class="sub-label">Kota/Kab</td>
+                <td class="sub-value" colspan="2">Kota Banjarmasin</td>
+            </tr>
+            <tr>
+                <td class="label">Fakultas</td>
+                <td class="value">Teknologi Informasi</td>
+                <td class="label">Prodi</td>
+                <td class="value">Teknik Informatika</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
